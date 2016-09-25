@@ -1,0 +1,114 @@
+\documentclass[10pt, a4paper,spanish]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{varwidth}
+\usepackage{hyperref}
+\usepackage{graphicx}
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{ \today $\bullet$ Entrega voluntaria sobre Agentes basados en Conocimiento} % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Entrega voluntaria sobre Agentes basados en Conocimiento}} % Article title
+
+\author{Sergio García Prado}
+\date{\today}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+	\maketitle % Insert title
+
+	\thispagestyle{fancy} % All pages have headers and footers
+
+
+%----------------------------------------------------------------------------------------
+%	TEXT
+%----------------------------------------------------------------------------------------
+	\section{Considerar un agente para rellenar crucigramas. Caracterizar el entorno del agente según las siguientes dimensiones: discreto (continuo), estático (semi, dinámico), determinista (estocástico), único agente (multi), episódico (secuencial) y totalmente observable (parcialmente)}
+
+		\paragraph{}
+
+
+
+	\section{Considerar un agente para jugar partidas de ajedrez con reloj. Caracterizar el entorno del agente según las siguientes dimensiones: discreto (continuo), estático (semi, dinámico), determinista (estocástico), único agente (multi), episódico (secuencial) y totalmente observable (parcialmente)}
+
+		\paragraph{}
+
+
+
+	\section{Demostrar que la Función de agente del agente aspirador descrita por “Si la casilla actual está sucia entonces aspirar, sino ir a la otra casilla” genera un comportamiento racional para la medida de rendimiento “10 puntos por casilla limpia por instante de tiempo”, bajo las suposiciones descritas en la transparencia nº 13 de la Introducción.}
+
+		\paragraph{}
+
+
+
+	\section{Considerar la función de agente modificada del agente aspirador que resta un punto por cada movimiento. Demostrar que la función de agente “Si la casilla actual está sucia entonces aspirar, sino ir a la otra casilla” no genera un comportamiento racional.}
+
+		\paragraph{}
+
+
+
+	\section{Considerar la función de agente modificada del agente aspirador que resta un punto por cada movimiento, junto a las suposiciones descritas en la transparencia nº 13. Contestar razonadamente a las siguientes cuestiones:}
+
+
+		\subsection{?`Puede un agente reactivo simple generar un comportamiento racional?}
+
+			\paragraph{}
+
+
+		\subsection{?`Puede un agente reactivo basado en modelos generar un comportamiento racional?}
+
+			\paragraph{}
+
+
+
+	\section{Suponer que modificamos la percepción del agente aspirador, de manera que cada percepción proporcione el estado de limpieza o suciedad de cada casilla, manteniendo el resto de las suposiciones descritas en la transparencia nº 13. La función de agente es la misma que en el apartado anterior. Contestar razonadamente a las siguientes cuestiones:}
+
+
+		\subsection{?`Puede un agente reactivo simple generar un comportamiento racional?}
+
+			\paragraph{}
+
+
+		\subsection{?`Puede un agente reactivo basado en modelos generar un comportamiento racional?}
+
+			\paragraph{}
+
+
+
+	\section{Suponer que modificamos el entorno del agente limpiador, de manera que en cada episodio del agente la probabilidad de que una casilla limpia se ensucie es de un 10 por ciento. La medida de rendimiento suma 10 puntos por cada casilla limpia en cada instante de tiempo y resta un punto por cada movimiento. Las restantes propiedades del agente y del entorno se mantienen como en la transparencia nº 13. Indicar como se puede modificar la función de agente para intentar generar un comportamiento racional. ¿Qué estructura de agente es la más adecuada?}
+
+		\paragraph{}
+\end{document}
