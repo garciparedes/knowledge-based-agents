@@ -59,13 +59,32 @@
 	\section{Considerar un agente para rellenar crucigramas. Caracterizar el entorno del agente según las siguientes dimensiones: discreto (continuo), estático (semi, dinámico), determinista (estocástico), único agente (multi), episódico (secuencial) y totalmente observable (parcialmente)}
 
 		\paragraph{}
+		El entorno de un agente diseñado para rellenar crucigramas tendría un entorno caracterizado por ser:
+
+		\begin{itemize}
+			\item Discreto (El estado cambia cada vez que el agente rellena una palabra)
+			\item Estatico (No se cambia de estado mientras el agente está deliberando)
+			\item Determinista (El estado del entorno solo depende de las acciones aplicadas por el agente)
+			\item Agente Individual (Suponemos que nuestro agente resolverá crucigramas él solo)
+			\item Secuencial (Introducir una palabra en el crucigrama condicionará las siguientes jugadas)
+			\item Totalmente Observable (En todo momento se podrá saber lo que contiene el crucigrama)
+		\end{itemize}
 
 
 
 	\section{Considerar un agente para jugar partidas de ajedrez con reloj. Caracterizar el entorno del agente según las siguientes dimensiones: discreto (continuo), estático (semi, dinámico), determinista (estocástico), único agente (multi), episódico (secuencial) y totalmente observable (parcialmente)}
 
 		\paragraph{}
+		El entorno de un agente diseñado para rellenar jugar partidas de ajedrez tendría un entorno caracterizado por ser:
 
+		\begin{itemize}
+			\item Discreto (El estado cambia cada vez que el agente o el rival realiza un movimiento)
+			\item Semidinámico (Si suponemos que en la partida hay un reloj o estático si suponemos que no lo hay)
+			\item Estocástico (Existe la incertidumbre sobre la jugada que realizará el rival)
+			\item Multi-agente (En una partida de ajedrez intervienen dos contrincantes (agentes), por tanto es de carácter competitivo)
+			\item Secuencial (Realizar una jugada condicionará las siguientes)
+			\item Totalmente Observable (En todo momento se podrá saber la posición de todas las piezas en el tablero)
+		\end{itemize}
 
 
 	\section{Demostrar que la Función de agente del agente aspirador descrita por “Si la casilla actual está sucia entonces aspirar, sino ir a la otra casilla” genera un comportamiento racional para la medida de rendimiento “10 puntos por casilla limpia por instante de tiempo”, bajo las suposiciones descritas en la transparencia nº 13 de la Introducción.}
