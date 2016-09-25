@@ -90,12 +90,13 @@
 	\section{Demostrar que la Función de agente del agente aspirador descrita por “Si la casilla actual está sucia entonces aspirar, sino ir a la otra casilla” genera un comportamiento racional para la medida de rendimiento “10 puntos por casilla limpia por instante de tiempo”, bajo las suposiciones descritas en la transparencia nº 13 de la Introducción.}
 
 		\paragraph{}
-
+		La función de agente es racional bajo la medida de rendimiento descrita ya que para todas las alternativas de esta, siempre se maxima el valor de la medida de rendimiento, aunque esta no sea la solución más eficiente. Aún así para la medida de rendimiento el comportamiento es racional.
 
 
 	\section{Considerar la función de agente modificada del agente aspirador que resta un punto por cada movimiento. Demostrar que la función de agente “Si la casilla actual está sucia entonces aspirar, sino ir a la otra casilla” no genera un comportamiento racional.}
 
 		\paragraph{}
+		El comportamiento en este caso no es racional debido a que la medida de rendimiento no siempre se maximiza, en el sentido de que no existe una alternativa para la cual no se realice ninguna operación si se tiene conocimiento de que la otra casilla está limpia. Dado que la función de agente que se da no tiene en cuenta esto, el agente podría estar cambiando de casilla indefinidamente haciendo que su medida de rendimiento se minimizase si las casillas siguen limpias, lo cual es un comportamiento irracional.
 
 
 
@@ -105,11 +106,13 @@
 		\subsection{?`Puede un agente reactivo simple generar un comportamiento racional?}
 
 			\paragraph{}
+			No, dado que pasaría lo descrito en el apartado anterior. Al no conocer sus acciones previas este se movería indefinidamente minimizando su medida de rendimiento.
 
 
 		\subsection{?`Puede un agente reactivo basado en modelos generar un comportamiento racional?}
 
 			\paragraph{}
+			Si, ya que cono este tipo de agente podemos almacenar situaciones previas, por lo tanto podríamos tener en cuenta si la limpiamos esa casilla anteriormente.
 
 
 
@@ -119,15 +122,21 @@
 		\subsection{?`Puede un agente reactivo simple generar un comportamiento racional?}
 
 			\paragraph{}
+			Si que podríamos generar un comportamiento racional si añadimos la restricción de cambiar de casilla únicamente si esta se encuentra sucia, el comportamiento sería racional.
 
 
 		\subsection{?`Puede un agente reactivo basado en modelos generar un comportamiento racional?}
 
 			\paragraph{}
+			Como en el caso anterior, si que podríamos generar un comportamiento racional, ya que en este caso tenemos más información .
 
 
 
 	\section{Suponer que modificamos el entorno del agente limpiador, de manera que en cada episodio del agente la probabilidad de que una casilla limpia se ensucie es de un 10 por ciento. La medida de rendimiento suma 10 puntos por cada casilla limpia en cada instante de tiempo y resta un punto por cada movimiento. Las restantes propiedades del agente y del entorno se mantienen como en la transparencia nº 13. Indicar como se puede modificar la función de agente para intentar generar un comportamiento racional. ¿Qué estructura de agente es la más adecuada?}
 
 		\paragraph{}
+		Dado que en este caso para que una casilla se vuelva a ensuciar esto dependerá de algo aleatorio el conocimiento previo no nos podrá servir, ya que la aleatoriedad no depende de ello. Por tanto creo que una buena alternativa sería usar un agente reactivo simple que funcione como el descrito inicialmente y para cambiarse de casilla también utilice un valor aleatorio, ya que sin conocimiento previo no se save si al desplazarse se encontrará la casilla limpia o sucia.
+
+		\paragraph{}
+		Se ha escogido esta alternativa frente a una que dependa del conocimiento previo o que aprenda por que al ser una medida aleatoría podría darse el caso de que durante 900 veces las casillas estén limpias y luego estén 100 veces seguidas ensuciandose. Este comporntamiento no se puede preveer ni aprender de él si suponemos que es totalmente aleatorio.
 \end{document}
